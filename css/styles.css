@@ -1,23 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url(nav.css);
-@import url(hero.css);
+@import url(hero_tiles.css);
 
 * {
-	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-
 	list-style-type: none;
-
+	box-sizing: border-box;
 	box-shadow: none;
-
-	--bright: #fff4e3;
-	--bright-colorful: #ffeed5;
 }
+
 body {
-	color: var(--bright);
+	/* Variables */
+	--bright: #FFF4E3;
+	--bright-colorful: #FFEED5;
 
 	font-family: "Montserrat", sans-serif;
+	color: var(--bright);
+	background-color: #e73c7e;
 }
 
 a {
@@ -25,8 +24,273 @@ a {
 }
 
 /* List of elements with flex centered */
-#nav-list, .nav-link > a, #main_hero {
+#nav-list, .nav-link > a, #hero, .hero_tile_links {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+nav {
+	z-index: 100;
+	position: absolute;
+	width: 100%;
+	height: 5rem;
+	transition: 0.2s;
+	background-color: rgba(0, 0, 0, 0.6);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav #nav-list, nav .nav-link, nav .nav-link > a {
+	height: 100%;
+}
+
+nav #nav-logo {
+	margin-left: 5rem;
+	shape-rendering: auto;
+}
+
+nav #nav-list {
+	gap: 1rem;
+}
+
+.nav-link > a {
+	position: relative;
+	padding: 0 2rem;
+	letter-spacing: 0.2pt;
+	color: var(--bright);
+	font-size: 12pt;
+	font-weight: 500;
+}
+
+.nav-link > a::before {
+	position: absolute;
+	bottom: 25px;
+	width: 0;
+	height: 2px;
+	content: "";
+	transition: 0.2s;
+	opacity: 0;
+	background-color: var(--bright);
+}
+
+.nav-link > a:hover::before {
+	width: calc(100% - 3.5rem);
+	opacity: 1;
+}
+
+/* ----------------------------- Hero Section ------------------------------ */
+#hero {
+	position: relative;
+	height: 100vh;
+	background-color: aquamarine;
+}
+
+.hero_tile {
+	z-index: 1;
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	transition: 0.2s;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero_tile::after {
+	z-index: -1;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 10rem;
+	content: "";
+	transition: 0.2s;
+	opacity: 0;
+	background-color: black;
+}
+
+.hero_tile:hover {
+	flex: 2.2;
+}
+
+.hero_active {
+	flex: 2;
+}
+
+.hero_active::after {
+	opacity: 0.6;
+}
+
+/* ----------------------------- Tiles Images ------------------------------ */
+#hero_paris {
+	background-image: url("../img/town-paris.jpg");
+}
+
+#hero_prague {
+	background-image: url("../img/town-prague.jpg");
+}
+
+#hero_seoul {
+	background-image: url("../img/town-seoul.jpg");
+}
+
+#hero_venice {
+	background-image: url("../img/town-venice.jpg");
+}
+
+/* -------------------------------- Tiles ---------------------------------- */
+
+
+.hero_tile > h1 {
+	transition: 0.2s;
+	text-transform: uppercase;
+	font-size: 2.6rem;
+	font-weight: 800;
+}
+
+.hero_tile > h2 {
+	color: var(--bright-colorful);
+	line-height: 1.2rem;
+	font-size: 2rem;
+	font-weight: 800;
+}
+
+.title_deal {
+	position: absolute;
+	width: auto;
+	padding: 0.5rem;
+	transform: translateY(-4rem);
+	text-transform: uppercase;
+	color: var(--bright);
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.hero_tile > p, .hero_tile_links {
+	transition: 0.2s;
+	opacity: 0;
+	color: var(--bright);
+	width: calc(((100vw / 5) * 2) - 4rem);
+}
+
+.hero_tile > p {
+	position: absolute;
+	bottom: 5rem;
+
+	text-align: justify;
+
+
+	font-weight: 500;
+}
+
+.hero_tile_links {
+	position: absolute;
+	bottom: 2rem;
+	justify-content: space-between;
+
+
+
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.hero_tile_links > li > a {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--bright);
+}
+
+.hero_tile_links > li > a::before {
+	position: absolute;
+	bottom: -0.1rem;
+	width: 0;
+	height: 2px;
+	content: "";
+	transition: 0.2s;
+	opacity: 0;
+	background-color: var(--bright);
+}
+
+.hero_tile_links > li > a:hover::before {
+	width: 100%;
+	opacity: 1;
+}
+
+.hero_active > p, .hero_active > .hero_tile_links {
+	opacity: 1;
+}
+
+/* ---------------------------- About section ------------------------------ */
+#about {
+	height: 100vh;
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+}
+
+#about_intro {
+	width: 66rem;
+	align-self: flex-end;
+	margin-right: 20%;
+}
+
+#about_mission {
+	width: 30rem;
+	align-self: flex-start;
+	margin-left: 10%;
+	margin-top: 6rem;
+}
+
+#about_body {
+	grid-column: 19 / 40;
+	grid-row: 21 / 31;
+}
+
+#about_conclusion {
+	grid-column: 15 / 34;
+	grid-row: 34 / 40;
+}
+
+#about > p {
+	padding: 3rem;
+	background-color: rgba(255, 255, 255, 0.9);
+	color: #1C1C1C;
+	font-size: 1.4em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .2s;
+}
+
+#about > p:hover {
+	scale: 1.05;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
 }

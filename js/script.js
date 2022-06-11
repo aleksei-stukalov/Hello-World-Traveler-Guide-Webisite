@@ -2,7 +2,7 @@ const d = document;
 const w = window;
 
 // We need a list of tiles to figure out the width of the active one
-const heroTilesNodelist = d.querySelectorAll('#main_hero > section');
+const heroTilesNodelist = d.querySelectorAll('#hero > section');
 
 const swapClass = (passedClass, passedObject, passedTarget = undefined) => {
   /**
