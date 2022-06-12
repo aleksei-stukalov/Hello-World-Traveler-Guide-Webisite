@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" />
+    <script src="./js/script.js" defer></script>
+    <title>GO 2C WORLD - Contact Us</title>
+  </head>
+  <body>
+    <nav>
+      <a href="./index.html" id="nav-logo">
+        <img src="./img/logo.svg" alt="GO 2C World Logo" width="180px" />
+      </a>
+      <ul id="nav-list">
+        <li class="nav-link">
+          <a href="./about-us.html">About Us</a>
+        </li>
+        <li class="nav-link">
+          <a href="./dealoftheweek.html">Deal of the week</a>
+        </li>
+        <li class="nav-link">
+          <a href="./newsletters.html">Newsletters</a>
+        </li>
+        <li class="nav-link">
+          <a href="./contact-us.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="contact_container">
+      <form id="contact" method="POST" action="mailto:bogus@bogus.com">
+        <h1 id="contact_heading">Contact us</h1>
+        <span id="contact_labels">
+          <label for="name">Your name</label>
+          <label for="email">Contact email</label>
+          <label for="message">Message</label>
+        </span>
+        <span id="contact_inputs">
+          <input type="text" id="contact_name" name="name" required />
+          <input type="email" id="contact_email" name="email" required />
+          <textarea name="message" id="contact_message"></textarea>
+          <input type="submit" id="contact_submit" value="Send message" />
+        </span>
+      </form>
+    </main>
+
+    <footer>
+      <div id="footer_company">
+        <img src="./img/logo.svg" width="140px" alt="GO 2C World Logo" />
+        <h2>Interesting New Zealanders in to traveling overseas.</h2>
+      </div>
+      <div id="footer_contact">
+        <h1>Contact us now</h1>
+        <h2>012 345 6789</h2>
+        <h3>11 Gill Street, New Plymouth 4310, New Zealand</h3>
+      </div>
+      <div id="footer_navigate">
+        <h1>Navigate</h1>
+        <ul>
+          <li><a href="#">List of countries to visit</a></li>
+          <li><a href="#">Deal of the week</a></li>
+          <li><a href="#">Latest News</a></li>
+          <li><a href="#">Subscribe to Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div id="footer_bottom">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Copyrights</a></li>
+        </ul>
+        <span>&copy; 2022 GO 2C New Zealand Ltd.</span>
+      </div>
+    </footer>
+  </body>
+</html>

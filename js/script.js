@@ -29,27 +29,27 @@ const swapClass = (passedClass, passedObject, passedTarget = undefined) => {
     // In the future i would love to expend on this error handler and have
     // more detailed error messages to be drawn with the ability to draw
     // on the screen in the message box or something. For now this will do.
-    return console.log(`Script error in swapClass().\n${message}`)
-  }
+    return console.log(`Script error in swapClass().\n${message}`);
+  };
 
   // -------------------------- Type Checking -------------------------------
   if (typeof passedClass !== 'string') {
     return drawError(`Parameter "passedClass" is of wrong type.\n` +
-      `Expected "string", got "${typeof passedClass}"`)
+      `Expected "string", got "${typeof passedClass}"`);
   }
   else if (typeof passedObject !== 'object') {
     return drawError(`Parameter "passedObject" is of wrong type.\n` +
-      `Expected "object", got "${typeof passedObject}"`)
+      `Expected "object", got "${typeof passedObject}"`);
   }
   else if (passedTarget !== undefined && typeof passedTarget !== 'object') {
     return drawError(`Parameter "passedTarget" is of wrong type.\n` +
-      `Expected "object", got "${typeof passedTarget}"`)
+      `Expected "object", got "${typeof passedTarget}"`);
   }
 
   // ------------------------ Array Conversion ------------------------------
   // Because passedObject can be either Array, NodeList or HTML Element
   passedObject = (passedObject instanceof HTMLElement) ? [passedObject]
-    : [...passedObject]
+    : [...passedObject];
 
   if (passedTarget !== undefined) {
     // Early return with error message if passedTarget is not in
@@ -57,21 +57,21 @@ const swapClass = (passedClass, passedObject, passedTarget = undefined) => {
     // redirector to keep the function going outside this scope, but here
     // we are just going to return a console message and thats it.
     if (!passedObject.includes(passedTarget)) {
-      return drawError(`"passedTarget" is not in "passedObject".`)
+      return drawError(`"passedTarget" is not in "passedObject".`);
     }
 
     passedObject.forEach((item, index) => {
       if (item === passedTarget) {
-        item.classList.contains(passedClass) || item.classList.add(passedClass)
+        item.classList.contains(passedClass) || item.classList.add(passedClass);
       }
-      else item.classList.remove(passedClass)
-    })
+      else item.classList.remove(passedClass);
+    });
   }
-}
+};
 
 heroTilesNodelist.forEach(_element => {
   _element.addEventListener('mouseenter', () => {
     swapClass('hero_active', heroTilesNodelist, _element);
-  })
-})
+  });
+});
 
