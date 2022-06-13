@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" />
-    <script src="./js/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png" />
+    <script src="/js/script.js" defer></script>
     <title>GO 2C WORLD - South Korea</title>
   </head>
 
   <body>
     <nav>
-      <a href="./index.html" id="nav-logo">
-        <img src="./img/logo.svg" alt="GO 2C World Logo" width="180px" />
+      <a href="/index.html" id="nav-logo">
+        <img src="/img/logo.svg" alt="GO 2C World Logo" width="180px" />
       </a>
       <ul id="nav-list">
         <li class="nav-link">
-          <a href="./about-us.html">About Us</a>
+          <a href="/pages/about-us.html">About Us</a>
         </li>
         <li class="nav-link">
-          <a href="./deal-of-the-week.html">Deal of the week</a>
+          <a href="/pages/deal-of-the-week.html">Deal of the week</a>
         </li>
         <li class="nav-link">
           <button onclick="openPopup()">Newsletters</button>
         </li>
         <li class="nav-link">
-          <a href="./contact-us.html">Contact Us</a>
+          <a href="/pages/contact-us.html">Contact Us</a>
         </li>
       </ul>
     </nav>
@@ -62,7 +62,7 @@
       </p>
       <ul>
         <li id="town_seoul" class="country_town">
-          <a href="./south-korea-seoul.html">Seoul</a>
+          <a href="/pages/south-korea-seoul.html">Seoul</a>
         </li>
         <li id="town_busan" class="country_town">
           <a href="#">Busan</a>
@@ -74,7 +74,9 @@
     </header>
 
     <main class="country_content">
-      <video src="./media/south-korea-clip.mp4"></video>
+      <video class="country_clip" poster="/img/poster-south-korea.jpg" controls>
+        <source src="/media/south-korea-clip.mp4" />
+      </video>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis,
         ipsum id convallis venenatis, massa lectus suscipit odio, id tincidunt
@@ -88,11 +90,12 @@
         amet, consectetur adipiscing elit. Cras convallis, ipsum id convallis
         venenatis, massa lectus suscipit odio, id tincidunt elit velit nec leo.
       </p>
+      <span id="country_content_aft" class="country_img"></span>
     </main>
 
     <footer>
       <div id="footer_company">
-        <img src="./img/logo.svg" width="140px" alt="GO 2C World Logo" />
+        <img src="/img/logo.svg" width="140px" alt="GO 2C World Logo" />
         <h2>Interesting New Zealanders in to traveling overseas.</h2>
       </div>
       <div id="footer_contact">

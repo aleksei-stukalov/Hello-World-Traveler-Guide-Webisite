@@ -99,7 +99,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 12rem 2.5rem;
-    background-color: #4b0507;
+    background-color: #1f1010;
 }
 
 #footer_company {
@@ -170,7 +170,7 @@ footer {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
 
-    background-color: #310002;
+    background-color: #0e0809;
 }
 
 #footer_bottom > ul {

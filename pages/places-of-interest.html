@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png" />
+    <script src="/js/script.js" defer></script>
+    <title>GO 2C WORLD - Place of interest in Seoul, South Korea</title>
+  </head>
+
+  <body>
+    <nav>
+      <a href="/index.html" id="nav-logo">
+        <img src="/img/logo.svg" alt="GO 2C World Logo" width="180px" />
+      </a>
+      <ul id="nav-list">
+        <li class="nav-link">
+          <a href="/pages/south-korea-seoul.html">Back to Seoul</a>
+        </li>
+        <li class="nav-link">
+          <a href="/pages/about-us.html">About Us</a>
+        </li>
+        <li class="nav-link">
+          <a href="/pages/deal-of-the-week.html">Deal of the week</a>
+        </li>
+        <li class="nav-link">
+          <button onclick="openPopup()">Newsletters</button>
+        </li>
+        <li class="nav-link">
+          <a href="/pages/contact-us.html">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="newsletters_container">
+      <form id="newsletters" method="POST" action="mailto:bogus@bogus.com">
+        <span id="newsletters_content">
+          <h1>Subscribe now!</h1>
+          <p>
+            Don’t miss out on our newletters and hot deals. Subscribe now and
+            always be inormed of current promotions!
+          </p>
+          <label for="email">Your email</label>
+          <input type="email" id="newsletters_email" name="email" required />
+          <span id="newsletters_buttons">
+            <input type="submit" id="newsletters_submit" value="Subscribe" />
+            <button id="newsletters_close" onclick="closePopup()">Close</button>
+          </span>
+        </span>
+        <span id="newsletters_content_aft"></span>
+      </form>
+    </div>
+
+    <header id="info_bunner">
+      <h1>Seoul, South Korea</h1>
+      <h2>Places of interest</h2>
+    </header>
+
+    <main id="info_content">
+      <article>
+        <header>Etiam convallis</header>
+        <p>
+          Etiam mattis placerat odio. Etiam convallis pulvinar turpis, sit amet
+          condimentum felis. Nullam mi mauris, vulputate at quam at, tempor
+          maximus augue. Morbi vitae purus sem. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Cras convallis, ipsum id convallis
+          venenatis, massa lectus suscipit odio, id tincidunt elit velit nec
+          leo.
+        </p>
+        <a href="#">More information</a>
+        <img
+          src="/img/detailed-places-of-interest-1_sqr.jpg"
+          alt="Etiam convallis Picture"
+          width="672px"
+        />
+      </article>
+      <article>
+        <header>Etiam convallis</header>
+        <p>
+          Etiam mattis placerat odio. Etiam convallis pulvinar turpis, sit amet
+          condimentum felis. Nullam mi mauris, vulputate at quam at, tempor
+          maximus augue. Morbi vitae purus sem. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Cras convallis, ipsum id convallis
+          venenatis, massa lectus suscipit odio, id tincidunt elit velit nec
+          leo.
+        </p>
+        <a href="#">More information</a>
+        <img
+          src="/img/detailed-places-of-interest-2_sqr.jpg"
+          alt="Etiam convallis Picture"
+          width="672px"
+        />
+      </article>
+      <article>
+        <header>Etiam convallis</header>
+        <p>
+          Etiam mattis placerat odio. Etiam convallis pulvinar turpis, sit amet
+          condimentum felis. Nullam mi mauris, vulputate at quam at, tempor
+          maximus augue. Morbi vitae purus sem. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Cras convallis, ipsum id convallis
+          venenatis, massa lectus suscipit odio, id tincidunt elit velit nec
+          leo.
+        </p>
+        <a href="#">More information</a>
+        <img
+          src="/img/detailed-places-of-interest-3_sqr.jpg"
+          alt="Etiam convallis Picture"
+          width="672px"
+        />
+      </article>
+      <article>
+        <header>Etiam convallis</header>
+        <p>
+          Etiam mattis placerat odio. Etiam convallis pulvinar turpis, sit amet
+          condimentum felis. Nullam mi mauris, vulputate at quam at, tempor
+          maximus augue. Morbi vitae purus sem. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Cras convallis, ipsum id convallis
+          venenatis, massa lectus suscipit odio, id tincidunt elit velit nec
+          leo.
+        </p>
+        <a href="#">More information</a>
+        <img
+          src="/img/detailed-places-of-interest-4_sqr.jpg"
+          alt="Etiam convallis Picture"
+          width="672px"
+        />
+      </article>
+      <aside>
+        <p>
+          Etiam mattis placerat odio. Etiam convallis pulvinar turpis, sit amet
+          condimentum felis. Nullam mi mauris, vulputate at quam at, tempor
+          maximus augue. Morbi vitae purus sem. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Cras convallis, ipsum id convallis
+          venenatis, massa lectus suscipit odio, id tincidunt elit velit nec
+          leo.
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      <div id="footer_company">
+        <img src="/img/logo.svg" width="140px" alt="GO 2C World Logo" />
+        <h2>Interesting New Zealanders in to traveling overseas.</h2>
+      </div>
+      <div id="footer_contact">
+        <h1>Contact us now</h1>
+        <h2>012 345 6789</h2>
+        <h3>11 Gill Street, New Plymouth 4310, New Zealand</h3>
+      </div>
+      <div id="footer_navigate">
+        <h1>Navigate</h1>
+        <ul>
+          <li><a href="#">List of countries to visit</a></li>
+          <li><a href="#">Deal of the week</a></li>
+          <li><a href="#">Latest News</a></li>
+          <li><a href="#">Subscribe to Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div id="footer_bottom">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Copyrights</a></li>
+        </ul>
+        <span>&copy; 2022 GO 2C New Zealand Ltd.</span>
+      </div>
+    </footer>
+  </body>
+</html>

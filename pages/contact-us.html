@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png" />
-    <script src="./js/script.js" defer></script>
-    <title>GO 2C WORLD - About Us</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png" />
+    <script src="/js/script.js" defer></script>
+    <title>GO 2C WORLD - Contact Us</title>
   </head>
 
   <body>
     <nav>
-      <a href="./index.html" id="nav-logo">
-        <img src="./img/logo.svg" alt="GO 2C World Logo" width="180px" />
+      <a href="/index.html" id="nav-logo">
+        <img src="/img/logo.svg" alt="GO 2C World Logo" width="180px" />
       </a>
       <ul id="nav-list">
         <li class="nav-link">
-          <a href="./about-us.html">About Us</a>
+          <a href="/pages/about-us.html">About Us</a>
         </li>
         <li class="nav-link">
-          <a href="./deal-of-the-week.html">Deal of the week</a>
+          <a href="/pages/deal-of-the-week.html">Deal of the week</a>
         </li>
         <li class="nav-link">
           <button onclick="openPopup()">Newsletters</button>
         </li>
         <li class="nav-link">
-          <a href="./contact-us.html">Contact Us</a>
+          <a href="/pages/contact-us.html">Contact Us</a>
         </li>
       </ul>
     </nav>
@@ -50,39 +50,26 @@
       </form>
     </div>
 
-    <div id="about">
-      <h1 id="about_heading">About Us</h1>
-      <p id="about_intro">
-        Hi, my name is Jamie and I have been working in the Travel Industry for
-        over 20 years. During the last couple of years the only travel we have
-        been able to do is watching videos of other people experiencing the joys
-        of new places and new adventures.
-      </p>
-      <p id="about_mission">
-        My passion is helping people plan their perfect trips. I believe in the
-        power of travel to bring people together, open minds and hearts and
-        create lasting memories.<br />
-        &nbsp; <br />
-        Now that the borders are open this website has been created to give you
-        a taste of what is available out there. Although you can't book through
-        our site we will suggest activities, places to stay and adventures to
-        have in each of the major cities around the World. Click on their links
-        and you will be taken to sites that we believe will assist you in making
-        your adventure dreams come true!!
-      </p>
-      <p id="about_conclusion">
-        After all, we only live once, and there's so much to see and so much to
-        do. Go on - get out there - Go and C the World!!
-      </p>
-      <span id="about_intro_aft" class="about_img"></span>
-      <span id="about_mission_bfr" class="about_img"></span>
-      <span id="about_mission_aft" class="about_img"></span>
-      <span id="about_conclusion_bfr" class="about_img"></span>
-    </div>
+    <main id="contact_container">
+      <form id="contact" method="POST" action="mailto:bogus@bogus.com">
+        <h1 id="contact_heading">Contact us</h1>
+        <span id="contact_labels">
+          <label for="name">Your name</label>
+          <label for="email">Contact email</label>
+          <label for="message">Message</label>
+        </span>
+        <span id="contact_inputs">
+          <input type="text" id="contact_name" name="name" required />
+          <input type="email" id="contact_email" name="email" required />
+          <textarea name="message" id="contact_message"></textarea>
+          <input type="submit" id="contact_submit" value="Send message" />
+        </span>
+      </form>
+    </main>
 
     <footer>
       <div id="footer_company">
-        <img src="./img/logo.svg" width="140px" alt="GO 2C World Logo" />
+        <img src="/img/logo.svg" width="140px" alt="GO 2C World Logo" />
         <h2>Interesting New Zealanders in to traveling overseas.</h2>
       </div>
       <div id="footer_contact">
