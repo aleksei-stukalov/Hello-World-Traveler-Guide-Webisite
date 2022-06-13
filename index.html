@@ -20,16 +20,35 @@
           <a href="./about-us.html">About Us</a>
         </li>
         <li class="nav-link">
-          <a href="./dealoftheweek.html">Deal of the week</a>
+          <a href="./deal-of-the-week.html">Deal of the week</a>
         </li>
         <li class="nav-link">
-          <a href="./newsletters.html">Newsletters</a>
+          <button onclick="openPopup()">Newsletters</button>
         </li>
         <li class="nav-link">
           <a href="./contact-us.html">Contact Us</a>
         </li>
       </ul>
     </nav>
+
+    <div id="newsletters_container">
+      <form id="newsletters" method="POST" action="mailto:bogus@bogus.com">
+        <span id="newsletters_content">
+          <h1>Subscribe now!</h1>
+          <p>
+            Don’t miss out on our newletters and hot deals. Subscribe now and
+            always be inormed of current promotions!
+          </p>
+          <label for="email">Your email</label>
+          <input type="email" id="newsletters_email" name="email" required />
+          <span id="newsletters_buttons">
+            <input type="submit" id="newsletters_submit" value="Subscribe" />
+            <button id="newsletters_close" onclick="closePopup()">Close</button>
+          </span>
+        </span>
+        <span id="newsletters_content_aft"></span>
+      </form>
+    </div>
 
     <div id="hero">
       <section id="hero_paris" class="hero_tile">
@@ -66,8 +85,8 @@
       </section>
       <section id="hero_seoul" class="hero_tile hero_active">
         <h3 class="title_deal">Deal of the week</h3>
-        <h1><a href="#">Seoul</a></h1>
-        <h2><a href="#">South Korea</a></h2>
+        <h1><a href="./south-korea-seoul.html">Seoul</a></h1>
+        <h2><a href="./south-korea.html">South Korea</a></h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

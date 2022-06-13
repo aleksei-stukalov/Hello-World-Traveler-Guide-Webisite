@@ -69,6 +69,16 @@ const swapClass = (passedClass, passedObject, passedTarget = undefined) => {
   }
 };
 
+
+const popupElement = d.querySelector('#newsletters_container');
+const openPopup = () => {
+  popupElement.style.display = 'flex';
+};
+
+const closePopup = () => {
+  popupElement.style.display = 'none';
+};
+
 heroTilesNodelist.forEach(_element => {
   _element.addEventListener('mouseenter', () => {
     swapClass('hero_active', heroTilesNodelist, _element);

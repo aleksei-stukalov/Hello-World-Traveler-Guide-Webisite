@@ -1,37 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  box-sizing: border-box;
-  box-shadow: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  /* Variables */
-  --color-most-bright: #FFF5E5;
-  --color-bright: #FFEED5;
-  --color-less-bright: #fddcab;
-  --color-dark: #312C26;
-  font-family: "Montserrat", sans-serif;
-  color: var(--color-most-bright);
-
-  background-color: var(--color-less-bright);
-}
-
-a {
-  text-decoration: none;
-}
+@import url(./elements.css);
 
 /* List of elements with flex centered */
 #nav-list,
 #nav-logo,
-.nav-link > a,
+.nav-link > *,
 #hero,
 .hero_tile_links,
 .hero_tile_links > li > a,
@@ -41,7 +14,12 @@ a {
 #contact_container,
 #contact_labels > label,
 #footer_bottom,
-#footer_bottom > ul {
+#footer_bottom > ul,
+#newsletters_container,
+#newsletters_buttons,
+#newsletters,
+.country_bunner > ul,
+.country_town > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,72 +27,14 @@ a {
 
 nav,
 .hero_tile,
-.nav-link > a::before,
+.nav-link > *::before,
 .title_deal,
 .hero_tile > h1,
 .hero_tile > h2,
 .hero_tile > p,
-.hero_tile_links {
+.hero_tile_links,
+.country_town::before {
   transition: 0.2s;
-}
-
-#nav-list, .nav-link, .nav-link > a {
-  height: 100%;
-}
-
-/* ---------------------------- Navigation Bar ----------------------------- */
-
-nav {
-  z-index: 100;
-  position: fixed;
-  top: 0;
-
-  width: 100%;
-  height: 5rem;
-
-  background-color: rgba(0, 0, 0, .6);
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#nav-logo {
-  margin-left: 6.25rem;
-  height: 100%;
-}
-
-#nav-logo > img {
-  shape-rendering: auto;
-}
-
-#nav-list {
-  gap: 1rem;
-  margin-right: 1.125rem;
-}
-
-.nav-link > a {
-  position: relative;
-  padding: 0 2rem;
-  letter-spacing: 0.2pt;
-  color: var(--color-most-bright);
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-.nav-link > a::before {
-  position: absolute;
-  bottom: 25px;
-  width: 0;
-  height: 2px;
-  content: "";
-  opacity: 0;
-  background-color: var(--color-most-bright);
-}
-
-.nav-link > a:hover::before {
-  width: calc(100% - 4rem);
-  opacity: 1;
 }
 
 /* ----------------------------- Hero Section ------------------------------ */
@@ -264,6 +184,12 @@ nav {
   display: grid;
   grid-template-columns: 1fr repeat(4, 22rem) 1fr;
   grid-template-rows: 5rem 28rem 35rem 11rem;
+
+  background-image: url('../img/about-us.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .about_img {
@@ -340,10 +266,114 @@ nav {
   background-image: url('../img/travel-02.jpg');
 }
 
+/* --------------------------- Newsletters Popup --------------------------- */
+#newsletters_container {
+  z-index: 1000;
+
+  display: none;
+
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#newsletters {
+  height: 28rem;
+  width: 50rem;
+  background-color: #D07057;
+}
+
+#newsletters_content_aft {
+  width: 20rem;
+  height: 100%;
+  background-image: url('../img/newsletters.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#newsletters_content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 30rem;
+  flex-direction: column;
+  padding: 0 5rem;
+}
+
+#newsletters_content > h1 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#newsletters_content > p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#newsletters_content > label {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  margin-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+#newsletters_email {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 0.875rem;
+}
+
+#newsletters_submit,
+#newsletters_close {
+  /* width: 11.5rem; */
+  height: 2.5rem;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--color-dark);
+  background-color: var(--color-most-bright);
+  gap: 1rem;
+}
+
+#newsletters_submit {
+  flex: 2;
+  margin-right: 0.875rem;
+}
+
+#newsletters_close {
+  flex: 1;
+}
+
+#newsletters_submit:hover,
+#newsletters_close:hover {
+  background-color: var(--color-less-bright);
+}
+
+#newsletters_submit:active,
+#newsletters_close:active {
+  background-color: var(--color-bright);
+}
+
+#newsletters_buttons {
+  width: 100%;
+}
+
 /* ---------------------------- Contact section ---------------------------- */
 #contact_container {
   height: 100vh;
   width: 100%;
+
+  background-image: url('../img/contact-us.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 #contact {
@@ -440,100 +470,105 @@ nav {
   background-color: var(--color-bright);
 }
 
-/* --------------------------------- Footer -------------------------------- */
-footer {
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 12rem 2.5rem;
-  background-color: #4b0507;
+/* ---------------------------- Country Section ---------------------------- */
+.country_bunner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  background-image: url('../img/banner-South-Korea-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-attachment: fixed;
 }
 
-#footer_company {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  padding-left: 5rem;
-  padding-right: 10rem;
-  padding-top: 2.5rem;
+.country_bunner::before {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: .6;
+  background-color: #312C26;
 }
 
-#footer_company > h2 {
-  margin-top: .5rem;
-  font-size: 1rem;
-  font-weight: 400;
+.country_bunner > ul {
+  z-index: 10;
+  width: 100%;
 }
 
-#footer_contact {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  padding-left: 5rem;
-  padding-right: 10rem;
-  padding-top: 2.5rem;
+.country_town {
+  position: relative;
+  flex: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-#footer_contact > h1 {
-  font-size: 1.125rem;
-  font-weight: 600;
+.country_town::before {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
 }
 
-#footer_contact > h2 {
-  margin-top: .5rem;
-  font-size: 1rem;
-  font-weight: 500;
+.country_town:hover::before {
+  opacity: .7;
 }
 
-#footer_contact > h3 {
-  font-size: 1rem;
-  margin-top: .25rem;
-  font-weight: 400;
-}
-
-#footer_navigate {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-  padding-left: 5rem;
-  padding-right: 10rem;
-  padding-top: 2.5rem;
-}
-
-#footer_navigate > h1 {
-  font-size: 1.125rem;
-  font-weight: 600;
-}
-
-#footer_navigate > ul {
-  margin-top: .25rem;
-}
-
-#footer_navigate > ul a {
-  color: var(--color-bright);
-}
-
-#footer_navigate > ul a:hover {
-  text-decoration: underline;
-}
-
-#footer_bottom {
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
-
-  background-color: #310002;
-}
-
-#footer_bottom > ul {
-  gap: 3.5rem;
-}
-
-#footer_bottom > span {
-  margin-left: 3.5rem;
-  font-size: 0.875rem;
-}
-
-#footer_bottom > ul a {
+.country_town > a {
+  position: relative;
+  z-index: 10;
+  height: 16.5rem;
+  width: 100%;
   color: var(--color-most-bright);
-  font-size: 0.875rem;
+  font-size: 2.625rem;
+  font-weight: 800;
 }
 
-#footer_bottom > ul a:hover {
-  text-decoration: underline;
+.country_bunner > p {
+  z-index: 10;
+  margin-bottom: 6rem;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  width: 29rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+}
+
+.country_bunner > h1 {
+  font-weight: 800;
+  font-size: 2.625rem;
+  z-index: 10;
+  margin-left: 5rem;
+}
+
+#town_seoul {
+  background-image: url('../img/link-Seoul.jpg');
+}
+
+#town_seoul::before {
+  background-color: #571300;
+}
+
+#town_busan {
+  background-image: url('../img/link-Busan.jpg');
+}
+
+#town_busan::before {
+  background-color: #501464;
+}
+
+#town_daegu {
+  background-image: url('../img/link-Daegu.jpg');
+}
+
+#town_daegu::before {
+  background-color: #008B94;
 }

@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Variables */
+    --color-most-bright: #FFF5E5;
+    --color-bright: #FFEED5;
+    --color-less-bright: #fddcab;
+    --color-dark: #312C26;
+    font-family: "Montserrat", sans-serif;
+    color: var(--color-most-bright);
+
+    background-color: var(--color-less-bright);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------------------------- Navigation Bar ----------------------------- */
+nav {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 5rem;
+
+    background-color: rgba(0, 0, 0, .6);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-list,
+.nav-link,
+.nav-link > * {
+    height: 100%;
+}
+
+#nav-logo {
+    margin-left: 6.25rem;
+    height: 100%;
+}
+
+#nav-logo > img {
+    shape-rendering: auto;
+}
+
+#nav-list {
+    gap: 1rem;
+    margin-right: 1.125rem;
+}
+
+.nav-link > * {
+    position: relative;
+    padding: 0 2rem;
+    letter-spacing: 0.2pt;
+    color: var(--color-most-bright);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.nav-link > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.nav-link > *::before {
+    position: absolute;
+    bottom: 25px;
+    width: 0;
+    height: 2px;
+    content: "";
+    opacity: 0;
+    background-color: var(--color-most-bright);
+}
+
+.nav-link > *:hover::before {
+    width: calc(100% - 4rem);
+    opacity: 1;
+}
+
+/* --------------------------------- Footer -------------------------------- */
+footer {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 12rem 2.5rem;
+    background-color: #4b0507;
+}
+
+#footer_company {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-left: 5rem;
+    padding-right: 10rem;
+    padding-top: 2.5rem;
+}
+
+#footer_company > h2 {
+    margin-top: .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#footer_contact {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding-left: 5rem;
+    padding-right: 10rem;
+    padding-top: 2.5rem;
+}
+
+#footer_contact > h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+#footer_contact > h2 {
+    margin-top: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#footer_contact > h3 {
+    font-size: 1rem;
+    margin-top: .25rem;
+    font-weight: 400;
+}
+
+#footer_navigate {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    padding-left: 5rem;
+    padding-right: 10rem;
+    padding-top: 2.5rem;
+}
+
+#footer_navigate > h1 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+#footer_navigate > ul {
+    margin-top: .25rem;
+}
+
+#footer_navigate > ul a {
+    color: var(--color-bright);
+}
+
+#footer_navigate > ul a:hover {
+    text-decoration: underline;
+}
+
+#footer_bottom {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+
+    background-color: #310002;
+}
+
+#footer_bottom > ul {
+    gap: 3.5rem;
+}
+
+#footer_bottom > span {
+    margin-left: 3.5rem;
+    font-size: 0.875rem;
+}
+
+#footer_bottom > ul a {
+    color: var(--color-most-bright);
+    font-size: 0.875rem;
+}
+
+#footer_bottom > ul a:hover {
+    text-decoration: underline;
+}
