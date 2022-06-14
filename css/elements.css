@@ -52,7 +52,7 @@ a {
 .town_content > p,
 .info_tile,
 .info_tile > *,
-#info_activities article:nth-of-type(2) * {
+#info_activities section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,6 +85,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#nav_button {
+    display: none;
 }
 
 #nav-list,
@@ -138,7 +142,7 @@ nav {
     opacity: 1;
 }
 
-@media only screen and (min-width: 50rem) and (max-width: 1600px) {
+@media only screen and (max-width: 1600px) {
     nav {
         height: 4rem;
     }
@@ -168,6 +172,35 @@ nav {
         width: calc(100% - 1.5rem);
         opacity: 1;
     }
+}
+
+@media only screen and (max-width: 62.5rem) {
+    #nav_button {
+        display: block;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 150px 1fr 48px;
+        grid-template-rows: 4rem auto;
+        grid-template-areas:
+            "nav-logo      .     nav-button"
+            "nav-menu  nav-menu  nav-menu";
+    }
+
+    #nav-logo {
+        grid-area: nav-logo;
+        margin-left: 1.5rem;
+    }
+
+    #nav_button {
+        grid-area: nav-button;
+    }
+
+    #nav-list {
+        grid-area: nav-menu;
+    }
+
 }
 
 /* --------------------------------- Footer -------------------------------- */
@@ -266,4 +299,51 @@ footer {
 
 #footer_bottom > ul a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (min-width: 80rem) and (max-width: 1600px) {
+    #footer_company {
+        padding-left: 3rem;
+        padding-right: 6rem;
+    }
+
+    #footer_company > h2 {
+        font-size: 0.875rem;
+    }
+
+    #footer_contact {
+        padding-left: 3rem;
+        padding-right: 6rem;
+        padding-top: 2rem;
+    }
+
+    #footer_contact > h1 {
+        font-size: 1rem;
+    }
+
+    #footer_contact > h2 {
+        font-size: 0.875rem;
+    }
+
+    #footer_contact > h3 {
+        font-size: 0.875rem;
+    }
+
+    #footer_navigate {
+        padding-left: 3rem;
+        padding-right: 6rem;
+        padding-top: 2rem;
+    }
+
+    #footer_navigate > h1 {
+        font-size: 1rem;
+    }
+
+    #footer_bottom > span {
+        font-size: 0.8rem;
+    }
+
+    #footer_bottom > ul a {
+        font-size: 0.8rem;
+    }
 }
