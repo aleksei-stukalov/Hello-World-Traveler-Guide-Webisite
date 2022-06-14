@@ -73,7 +73,7 @@ nav,
 
 /* ---------------------------- Navigation Bar ----------------------------- */
 nav {
-    z-index: 100;
+    z-index: 100000;
     position: fixed;
     top: 0;
 
