@@ -40,19 +40,19 @@
     <!-- Pop Up Window -->
     <div id="newsletters_container">
       <form id="newsletters" method="POST" action="mailto:bogus@bogus.com">
-        <span id="newsletters_content">
+        <section id="newsletters_content">
           <h1>Subscribe now!</h1>
           <p>
             Don’t miss out on our newletters and hot deals. Subscribe now and
             always be inormed of current promotions!
           </p>
-          <label for="email">Your email</label>
+          <label for="newsletters_email">Your email</label>
           <input type="email" id="newsletters_email" name="email" required />
           <span id="newsletters_buttons">
             <input type="submit" id="newsletters_submit" value="Subscribe" />
             <button id="newsletters_close" onclick="closePopup()">Close</button>
           </span>
-        </span>
+        </section>
         <span id="newsletters_content_aft"></span>
       </form>
     </div>
