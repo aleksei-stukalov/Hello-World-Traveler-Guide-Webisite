@@ -4,36 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.png" />
-    <script src="/js/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png" />
+    <script src="../js/script.js" defer></script>
     <title>GO 2C WORLD - About Us</title>
   </head>
 
   <body>
+    <!-- Navigation Menu -->
     <nav>
-      <a href="/index.html" id="nav-logo">
-        <img src="/img/logo.svg" alt="GO 2C World Logo" width="180px" />
+      <a href="../index.html" id="nav-logo">
+        <img src="../img/logo.svg" alt="GO 2C World Logo" width="180" />
       </a>
+      <button id="nav_button">
+        <img src="../img/menu.svg" alt="Menu icon" width="48" />
+      </button>
       <ul id="nav-list">
         <li class="nav-link">
-          <a href="/index.html">Back to Home page</a>
+          <a href="../index.html">Back to Home page</a>
         </li>
         <li class="nav-link">
-          <a href="/pages/about-us.html">About Us</a>
+          <a href="./about-us.html" class="current_page">About Us</a>
         </li>
         <li class="nav-link">
-          <a href="/pages/south-korea-seoul.html">Deal of the week</a>
+          <a href="./south-korea-seoul.html">Deal of the week</a>
         </li>
         <li class="nav-link">
           <button onclick="openPopup()">Newsletters</button>
         </li>
         <li class="nav-link">
-          <a href="/pages/contact-us.html">Contact Us</a>
+          <a href="./contact-us.html">Contact Us</a>
         </li>
       </ul>
     </nav>
-
+    <!-- Pop Up Window -->
     <div id="newsletters_container">
       <form id="newsletters" method="POST" action="mailto:bogus@bogus.com">
         <span id="newsletters_content">
@@ -52,7 +56,7 @@
         <span id="newsletters_content_aft"></span>
       </form>
     </div>
-
+    <!-- The page -->
     <div id="about">
       <h1 id="about_heading">About Us</h1>
       <p id="about_intro">
@@ -82,10 +86,10 @@
       <span id="about_mission_aft" class="about_img"></span>
       <span id="about_conclusion_bfr" class="about_img"></span>
     </div>
-
+    <!-- Footer -->
     <footer>
       <div id="footer_company">
-        <img src="/img/logo.svg" width="140px" alt="GO 2C World Logo" />
+        <img src="../img/logo.svg" width="140" alt="GO 2C World Logo" />
         <h2>Interesting New Zealanders in to traveling overseas.</h2>
       </div>
       <div id="footer_contact">
@@ -96,18 +100,18 @@
       <div id="footer_navigate">
         <h1>Navigate</h1>
         <ul>
-          <li><a href="#">List of countries to visit</a></li>
-          <li><a href="#">Deal of the week</a></li>
-          <li><a href="#">Latest News</a></li>
-          <li><a href="#">Subscribe to Us</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="../placeholder.html">List of countries to visit</a></li>
+          <li><a href="../placeholder.html">Deal of the week</a></li>
+          <li><a href="../placeholder.html">Latest News</a></li>
+          <li><a href="../placeholder.html">Subscribe to Us</a></li>
+          <li><a href="../placeholder.html">Contact Us</a></li>
         </ul>
       </div>
       <div id="footer_bottom">
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Sitemap</a></li>
-          <li><a href="#">Copyrights</a></li>
+          <li><a href="../placeholder.html">Privacy Policy</a></li>
+          <li><a href="../placeholder.html">Sitemap</a></li>
+          <li><a href="../placeholder.html">Copyrights</a></li>
         </ul>
         <span>&copy; 2022 GO 2C New Zealand Ltd.</span>
       </div>

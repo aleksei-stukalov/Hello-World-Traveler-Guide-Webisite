@@ -73,11 +73,24 @@ const swapClass = (passedClass, passedObject, passedTarget = undefined) => {
 const popupElement = d.querySelector('#newsletters_container');
 const openPopup = () => {
   popupElement.style.display = 'flex';
+  mobileMenuElement.classList.toggle('opened_list');
+  mobileMenuElement.classList.toggle('close_list');
 };
-
 const closePopup = () => {
   popupElement.style.display = 'none';
+  mobileMenuElement.classList.toggle('opened_list');
+  mobileMenuElement.classList.toggle('close_list');
 };
+
+
+const mobileMenuElement = d.querySelector('#nav-list');
+mobileMenuElement.classList.add('close_list');
+
+const mobileMenyButton = d.querySelector('#nav_button');
+mobileMenyButton.addEventListener('click', () => {
+  mobileMenuElement.classList.toggle('opened_list');
+  mobileMenuElement.classList.toggle('close_list');
+});
 
 heroTilesNodelist.forEach(_element => {
   _element.addEventListener('mouseenter', () => {

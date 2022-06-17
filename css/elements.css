@@ -52,7 +52,8 @@ a {
 .town_content > p,
 .info_tile,
 .info_tile > *,
-#info_activities section {
+#info_activities section,
+#nav_button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +61,7 @@ a {
 
 nav,
 .hero_tile,
+#nav-list,
 .nav-link > *::before,
 .title_deal,
 .hero_tile > h1,
@@ -73,6 +75,7 @@ nav,
 
 /* ---------------------------- Navigation Bar ----------------------------- */
 nav {
+    position: relative;
     z-index: 100000;
     position: fixed;
     top: 0;
@@ -89,6 +92,11 @@ nav {
 
 #nav_button {
     display: none;
+    width: 4rem;
+    height: 4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 #nav-list,
@@ -107,8 +115,13 @@ nav {
 }
 
 #nav-list {
+    position: relative;
     gap: 1rem;
     margin-right: 1.125rem;
+}
+
+.nav-link {
+    position: relative;
 }
 
 .nav-link > * {
@@ -138,6 +151,11 @@ nav {
 }
 
 .nav-link > *:hover::before {
+    width: calc(100% - 4rem);
+    opacity: 1;
+}
+
+.current_page::before {
     width: calc(100% - 4rem);
     opacity: 1;
 }
@@ -175,17 +193,13 @@ nav {
 }
 
 @media only screen and (max-width: 62.5rem) {
-    #nav_button {
-        display: block;
-    }
-
     nav {
         display: grid;
-        grid-template-columns: 150px 1fr 48px;
-        grid-template-rows: 4rem auto;
         grid-template-areas:
             "nav-logo      .     nav-button"
             "nav-menu  nav-menu  nav-menu";
+        background-color: rgba(14, 8, 9, 0.8);
+
     }
 
     #nav-logo {
@@ -194,13 +208,33 @@ nav {
     }
 
     #nav_button {
+        display: flex;
         grid-area: nav-button;
     }
 
     #nav-list {
         grid-area: nav-menu;
+        flex-direction: column;
+        background-color: rgba(14, 8, 9, 0.8);
+        width: 100%;
     }
 
+    #nav-list > * {
+        height: 4rem;
+        width: 100%;
+    }
+
+    .nav-link > button {
+        width: 100%;
+    }
+
+    .opened_list {
+        transform: translateY(0);
+    }
+
+    .close_list {
+        transform: translateY(-200%);
+    }
 }
 
 /* --------------------------------- Footer -------------------------------- */
@@ -345,5 +379,79 @@ footer {
 
     #footer_bottom > ul a {
         font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 62.5rem) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer_company {
+        padding-left: 2rem;
+        padding-right: 5rem;
+    }
+
+    #footer_company > h2 {
+        font-size: 0.875rem;
+    }
+
+    #footer_contact {
+        padding-left: 2rem;
+        padding-right: 5rem;
+    }
+
+    #footer_contact > h1 {
+        font-size: 1rem;
+    }
+
+    #footer_contact > h2 {
+        font-size: 0.875rem;
+    }
+
+    #footer_contact > h3 {
+        font-size: 0.875rem;
+    }
+
+    #footer_navigate {
+        padding-left: 2rem;
+        padding-right: 5rem;
+    }
+
+    #footer_navigate > ul > li {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    #footer_navigate > ul a {
+        text-decoration: underline;
+    }
+
+    #footer_navigate > h1 {
+        font-size: 1rem;
+    }
+
+    #footer_bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 2rem;
+    }
+
+    #footer_bottom > ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    #footer_bottom > * {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-left: 2rem;
+    }
+
+    #footer_bottom > span {
+        margin-left: 2rem;
     }
 }

@@ -183,6 +183,47 @@
   }
 }
 
+@media only screen and (max-width: 62.5rem) {
+  #hero {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .hero_tile {
+    height: 100vh;
+    width: 100%;
+    flex: none;
+  }
+
+  .hero_tile > * {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .hero_tile_links {
+    gap: 1.2rem;
+  }
+
+  .hero_tile > p {
+    font-size: 1rem;
+  }
+
+  .hero_tile > h2 {
+    line-height: 2.2rem;
+    font-size: 2.25rem;
+  }
+
+  .hero_tile > h1 {
+    font-size: 3.6rem;
+  }
+
+  .hero_active > h1,
+  .hero_active > h2 {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
 /* ---------------------------- About section ------------------------------ */
 #about {
   padding-top: 5rem;
@@ -359,6 +400,61 @@
   }
 }
 
+@media only screen and (max-width: 62.5rem) {
+  #about {
+    grid-template-columns: 1fr;
+    grid-template-rows: 4rem 30vh auto 30vh auto 30vh auto 30vh;
+  }
+
+  #about > * {
+    grid-column: 1 / 2;
+  }
+
+  #about > p {
+    padding: 2rem 2rem;
+  }
+
+  #about_heading {
+    grid-row: 1 / 2;
+    padding-left: 2rem;
+  }
+
+  #about_intro_aft {
+    grid-row: 2 / 3;
+  }
+
+  #about_intro {
+    grid-row: 3 / 4;
+
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+  }
+
+  #about_mission_bfr {
+    grid-row: 4 / 5;
+  }
+
+  #about_mission {
+    grid-row: 5 / 6;
+
+    line-height: 1.6rem;
+  }
+
+  #about_mission_aft {
+    grid-row: 6 / 7;
+  }
+
+  #about_conclusion {
+    grid-row: 7 / 8;
+
+    line-height: 1.6rem;
+  }
+
+  #about_conclusion_bfr {
+    grid-row: 8 / 9;
+  }
+}
+
 /* --------------------------- Newsletters Popup --------------------------- */
 #newsletters_container {
   z-index: 1000;
@@ -457,8 +553,33 @@
   width: 100%;
 }
 
+@media only screen and (max-width: 62.5rem) {
+  #newsletters {
+    transform: translateY(2rem);
+    height: calc(100% - 10rem);
+    width: calc(100% - 4rem);
+  }
+
+  #newsletters_content_aft {
+    display: none;
+  }
+
+  #newsletters_content {
+    padding: 2rem 2rem;
+  }
+
+  #newsletters_content > h1 {
+    font-size: 1.2rem;
+  }
+
+  #newsletters_content > label {
+    font-weight: 500;
+  }
+}
+
 /* ---------------------------- Contact section ---------------------------- */
 #contact_container {
+  position: relative;
   height: 100vh;
   width: 100%;
 
@@ -564,6 +685,12 @@
   background-color: var(--color-bright);
 }
 
+#contact_message::placeholder,
+#contact_email::placeholder,
+#contact_name::placeholder {
+  opacity: 0;
+}
+
 @media only screen and (max-width: 1600px) {
   #contact {
     display: grid;
@@ -604,6 +731,52 @@
   #contact_inputs {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+  }
+}
+
+@media only screen and (max-width: 62.5rem) {
+  #contact {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #contact_heading {
+    margin-top: 4rem;
+    padding-left: 2rem;
+    height: 4rem;
+    width: 100%;
+  }
+
+  #contact_labels {
+    display: none;
+  }
+
+  #contact_inputs {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #contact_message,
+  #contact_inputs > input {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  #contact_message {
+    position: relative;
+    width: 100%;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .5rem;
+  }
+
+  #contact_message::placeholder,
+  #contact_email::placeholder,
+  #contact_name::placeholder {
+    opacity: 1;
   }
 }
 
@@ -791,6 +964,69 @@
   #country_content_aft {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+  }
+}
+
+@media only screen and (max-width: 62.5rem) {
+  .country_bunner {
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .country_bunner > h1 {
+    font-size: 2.625rem;
+    margin-left: 2rem;
+    margin-top: 10rem;
+  }
+
+  .country_bunner > p {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: auto;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .country_bunner > ul {
+    flex-direction: column;
+  }
+
+  .country_town {
+    width: 100%;
+  }
+
+  .country_town > a {
+    height: 10rem;
+    font-size: 2rem;
+  }
+
+  .country_content {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 30vh;
+  }
+
+  .country_clip {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+  }
+
+  .country_content > p {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  #country_content_aft {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
   }
 }
 
@@ -1050,27 +1286,80 @@
       "img4 p4";
   }
 
-  .country_clip {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
+  .town_pictures > li::before {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 62.5rem) {
+  .town_content {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 20vh auto 20vh auto 20vh auto 20vh;
+    grid-template-areas:
+      "clip"
+      "p1"
+      "img1"
+      "p2"
+      "img2"
+      "p3"
+      "img3"
+      "p4"
+      "img4";
   }
 
-  .country_content > p {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  .town_content > p {
+    padding: 2rem;
   }
 
-  #country_content_aft {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+  .town_bunner > h1 {
+    font-size: 2.625rem;
+    margin-left: 2rem;
+    margin-top: 10rem;
+  }
+
+  .town_bunner > p {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: auto;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .town_title_deal {
+    margin-left: 2rem;
+    top: 8rem;
   }
 
   .town_pictures > li::before {
     opacity: 0;
+  }
+
+  .town_links {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .town_links a {
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+
+  .town_pictures {
+    flex-direction: column;
+  }
+
+  .town_pictures > li {
+    height: 30vh;
+    width: 100%;
+    overflow: hidden;
+    flex: none;
   }
 }
 
@@ -1084,9 +1373,8 @@
   flex-direction: column;
 
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   background-position: top;
+  background-size: contain;
   background-attachment: fixed;
 }
 
@@ -1342,5 +1630,60 @@
 
   .info_tile img {
     width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 62.5rem) {
+  .info_bunner {
+    height: 40vh;
+    background-size: cover;
+  }
+
+  .info_tile section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .info_tile > * {
+    flex-direction: column;
+  }
+
+  .info_tile img {
+    width: 100%;
+  }
+
+  .info_tile aside {
+    padding: 2rem;
+  }
+
+  .info_tile section {
+    padding: 2rem;
+  }
+
+  #info_accommodation > article {
+    height: auto;
+  }
+
+  .info_tile > article:nth-of-type(even) {
+    flex-direction: column;
+  }
+
+  #info_accommodation > article:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #info_accommodation > article:nth-of-type(2) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #info_activities article {
+    flex-direction: column;
+  }
+
+  #info_activities > article:nth-of-type(2) {
+    display: flex;
   }
 }
